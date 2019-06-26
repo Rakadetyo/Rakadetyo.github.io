@@ -1,1 +1,1125 @@
-AAAAAAAAAAAAAAAAAAAAAA Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MKN Mining Site Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom Style -->
+  <style type="text/css">
+    .machine-icon {
+      max-width: 32.333%;
+      padding: .8rem .3rem .8rem .3rem;
+    }
+    .btn-info {
+      width: 100%;
+    }
+    .site-btn {
+      width: 100%;
+      margin-top: .2rem;
+      margin-bottom: .2rem;
+      justify-content: space-between;
+    }
+    .site-btn > .icon {
+      background: none;
+    }
+    .btn-danger > .icon {
+      padding-right: 1rem;
+    }
+    .legend {
+      max-width: 32.323%;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">MKN Mining Site</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Data Monitoring</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Predictive Analytic</span></a>
+      </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form> -->
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                <span class="badge badge-danger badge-counter">7</span>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Predictive Analytic Dashboard</h1>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Maintenance & Failure Pane -->
+            <div class="col-xl-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Machine Maintenance & Failure</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body" style="padding:1rem 0 1rem 0">
+
+                  <!-- Color Legend & Counting -->
+                  <div class="col-xl-12">
+                    <span class="col-xl-4 badge badge-success legend">Safe</span>
+                    <span class="col-xl-4 badge badge-warning legend">Warning</span>
+                    <span class="col-xl-4 badge badge-danger legend">Danger</span>
+                  </div>
+
+                  <!-- Machine Status -->
+                  <div class="col-xl-12" style="padding:0">
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_green.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a id="asset1_mf_link" href="#">Asset 1</a>
+                      </div>
+                    </div>
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_yellow.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a id="asset2_mf_link" href="#">Asset 2</a>
+                      </div>
+                    </div>
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_red.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a id="asset3_mf_link" href="#">Asset 3</a>
+                      </div>
+                    </div>
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_yellow.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a href="#">Asset 4</a>
+                      </div>
+                    </div>
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_yellow.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a href="#">Asset 5</a>
+                      </div>
+                    </div>
+                    <div class="d-sm-inline-block col-xl-4 machine-icon">
+                      <img src="asset/machine_green.png" class="col-xl-12">
+                      <div class="text-center">
+                        <a href="#">Asset 6</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Expand Button -->
+                  <div class="col-xl-12" style="margin-top:1.6rem">
+                    <a class="btn btn-info" href="#">View More</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Seismic Activity Pane -->
+            <div class="col-xl-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Seismic Activity</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body" style="padding-top:.8rem; padding-bottom:.8rem">
+
+                  <!-- Site List & Status -->
+                  <a href="#" id="loc1_sa_link" class="btn btn-danger btn-icon-split site-btn">
+                    <span class="text pull-left">Mining Site 1</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-times"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-warning btn-icon-split site-btn">
+                    <span class="text">Mining Site 2</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 3</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 4</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-danger btn-icon-split site-btn">
+                    <span class="text pull-left">Mining Site 5</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-times"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 6</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+                  
+                  <!-- Expand Button -->
+                  <div class="col-xl-12" style="padding:0; margin-top:1.5rem; margin-bottom:.2rem">
+                    <a class="btn btn-info" href="#">View More</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Environment Hazard Pane -->
+            <div class="col-xl-4">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Environmental Hazard Condition</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body" style="padding-top:.8rem; padding-bottom:.8rem">
+
+                  <!-- Site List & Status -->
+                  <a href="#" id="loc1_eh_link" class="btn btn-danger btn-icon-split site-btn">
+                    <span class="text pull-left">Mining Site 1</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-times"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-warning btn-icon-split site-btn">
+                    <span class="text">Mining Site 2</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 3</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 4</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-danger btn-icon-split site-btn">
+                    <span class="text pull-left">Mining Site 5</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-times"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-split site-btn">
+                    <span class="text">Mining Site 6</span>
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                  </a>
+
+                  <!-- Expand Button -->
+                  <div class="col-xl-12" style="padding:0; margin-top:1.5rem; margin-bottom:.2rem">
+                    <a class="btn btn-info" href="#">View More</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Hidden Navigation -->
+            <ul class="nav nav-tabs d-none">
+              <li class="nav-item"><a id="asset1_mf_tab" class="nav-link active" data-toggle="tab" href="#asset1_mf"></a></li>
+              <li class="nav-item"><a id="asset2_mf_tab" class="nav-link" data-toggle="tab" href="#asset2_mf"></a></li>
+              <li class="nav-item"><a id="asset3_mf_tab" class="nav-link" data-toggle="tab" href="#asset3_mf"></a></li>
+              <li class="nav-item"><a id="loc1_sa_tab" class="nav-link" data-toggle="tab" href="#loc1_sa"></a></li>
+              <li class="nav-item"><a id="loc2_sa_tab" class="nav-link" data-toggle="tab" href="#loc2_sa"></a></li>
+              <li class="nav-item"><a id="loc3_sa_tab" class="nav-link" data-toggle="tab" href="#loc3_sa"></a></li>
+              <li class="nav-item"><a id="loc1_eh_tab" class="nav-link" data-toggle="tab" href="#loc1_eh"></a></li>
+              <li class="nav-item"><a id="loc2_eh_tab" class="nav-link" data-toggle="tab" href="#loc2_eh"></a></li>
+              <li class="nav-item"><a id="loc3_eh_tab" class="nav-link" data-toggle="tab" href="#loc3_eh"></a></li>
+            </ul>
+
+          </div>
+
+          <div class="tab-content">
+
+            <div id="asset1_mf" class="tab-pane container active">
+
+              <!-- Overview Title -->
+              <div class="text-center" style="margin-top:2rem">
+                <h2 style="text-decoration:underline">ASSET 1 MAINTENANCE & FAILURE OVERVIEW</h2>
+              </div>
+
+              <!-- Content Row -->
+              <div class="row">
+
+                <!-- Overall Condition -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Overall Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h6 style="text-decoration:underline">Status</h6>
+                        <div class="col-xl-12">
+                          <img src="asset/machine_green.png" class="col-xl-12" style="max-width:50%">
+                        </div>
+                        <div class="text-success" style="font-weight:bold">Operated Normally</div>
+                        <br>
+                        <div class="col-xs-12">
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            Temperature:
+                            <div class="text-success" style="font-weight:bold">Normal</div>
+                          </div>
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            RPM:
+                            <div class="text-success" style="font-weight:bold">Normal</div>
+                          </div>
+                        </div>
+                        <br>
+                        <div>Next Possible Failure:</div>
+                        <div class="text-success" style="font-weight:bold">Unknown</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Machine Details -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Machine Details</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Attribute</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>ID</td>
+                          <td>MCHN001</td>
+                        </tr>
+                        <tr>
+                          <td>Model</td>
+                          <td>Model A</td>
+                        </tr>
+                        <tr>
+                          <td>Year</td>
+                          <td>2018</td>
+                        </tr>
+                        <tr>
+                          <td>Type</td>
+                          <td>Driller</td>
+                        </tr>
+                        <tr>
+                          <td>Last Repair</td>
+                          <td>21 June 2019</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Temperature -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Temperature Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset1TempOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RPM -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">RPM Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset1RpmOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="asset2_mf" class="tab-pane container">
+            
+              <!-- Overview Title -->
+              <div class="text-center" style="margin-top:2rem">
+                <h2 style="text-decoration:underline">ASSET 2 MAINTENANCE & FAILURE OVERVIEW</h2>
+              </div>
+
+              <!-- Content Row -->
+              <div class="row">
+
+                <!-- Overall Condition -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Overall Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h6 style="text-decoration:underline">Status</h6>
+                        <div class="col-xl-12">
+                          <img src="asset/machine_yellow.png" class="col-xl-12" style="max-width:50%">
+                        </div>
+                        <div class="text-warning" style="font-weight:bold">Need Maintenance</div>
+                        <br>
+                        <div class="col-xs-12">
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            Temperature:
+                            <div class="text-warning" style="font-weight:bold">Warning</div>
+                          </div>
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            RPM:
+                            <div class="text-success" style="font-weight:bold">Normal</div>
+                          </div>
+                        </div>
+                        <br>
+                        <div>Next Possible Failure:</div>
+                        <div class="text-warning" style="font-weight:bold">01 July 2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Machine Details -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Machine Details</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Attribute</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>ID</td>
+                          <td>MCHN002</td>
+                        </tr>
+                        <tr>
+                          <td>Model</td>
+                          <td>Model A</td>
+                        </tr>
+                        <tr>
+                          <td>Year</td>
+                          <td>2018</td>
+                        </tr>
+                        <tr>
+                          <td>Type</td>
+                          <td>Driller</td>
+                        </tr>
+                        <tr>
+                          <td>Last Repair</td>
+                          <td>21 June 2019</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Temperature -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Temperature Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset2TempOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RPM -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">RPM Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset2RpmOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="asset3_mf" class="tab-pane container">
+            
+              <!-- Overview Title -->
+              <div class="text-center" style="margin-top:2rem">
+                <h2 style="text-decoration:underline">ASSET 3 MAINTENANCE & FAILURE OVERVIEW</h2>
+              </div>
+
+              <!-- Content Row -->
+              <div class="row">
+
+                <!-- Overall Condition -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Overall Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h6 style="text-decoration:underline">Status</h6>
+                        <div class="col-xl-12">
+                          <img src="asset/machine_red.png" class="col-xl-12" style="max-width:50%">
+                        </div>
+                        <div class="text-danger" style="font-weight:bold">In Critical Condition</div>
+                        <br>
+                        <div class="col-xs-12">
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            Temperature:
+                            <div class="text-warning" style="font-weight:bold">Warning</div>
+                          </div>
+                          <div class="d-sm-inline-block col-xl-6" style="max-width:49%">
+                            RPM:
+                            <div class="text-danger" style="font-weight:bold">Danger</div>
+                          </div>
+                        </div>
+                        <br>
+                        <div>Next Possible Failure:</div>
+                        <div class="text-danger" style="font-weight:bold">27 June 2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Machine Details -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Machine Details</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Attribute</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>ID</td>
+                          <td>MCHN003</td>
+                        </tr>
+                        <tr>
+                          <td>Model</td>
+                          <td>Model A</td>
+                        </tr>
+                        <tr>
+                          <td>Year</td>
+                          <td>2018</td>
+                        </tr>
+                        <tr>
+                          <td>Type</td>
+                          <td>Driller</td>
+                        </tr>
+                        <tr>
+                          <td>Last Repair</td>
+                          <td>21 June 2019</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Temperature -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Temperature Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset3TempOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RPM -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">RPM Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Asset3RpmOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="loc1_sa" class="tab-pane container">
+            
+              <!-- Overview Title -->
+              <div class="text-center" style="margin-top:2rem">
+                <h2 style="text-decoration:underline">LOCATION 1 SEISMIC ACTIVITY OVERVIEW</h2>
+              </div>
+
+              <!-- Content Row -->
+              <div class="row">
+
+                <!-- Overall Condition -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Overall Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h6 style="text-decoration:underline">Status</h6>
+                        <div class="btn btn-circle btn-lg btn-success">
+                          <i class="fas fa-check"></i>
+                        </div>
+                        <div class="text-success" style="font-weight:bold">Safe to be Operated</div>
+                        <br>
+                        <div class="d-sm-inline-block col-xl-12">
+                          Tremor:
+                          <div class="text-success" style="font-weight:bold">Normal</div>
+                        </div>
+                        <br>
+                        <div>Next Possible Evacuation:</div>
+                        <div class="text-success" style="font-weight:bold">Unknown</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Machine Details -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Machine Details</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Attribute</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>ID</td>
+                          <td>SITE001</td>
+                        </tr>
+                        <tr>
+                          <td>Location</td>
+                          <td>Jakarta</td>
+                        </tr>
+                        <tr>
+                          <td>Year</td>
+                          <td>2018</td>
+                        </tr>
+                        <tr>
+                          <td>Type</td>
+                          <td>Coal Mining</td>
+                        </tr>
+                        <tr>
+                          <td>Last Accident</td>
+                          <td>21 June 2019</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tremor -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Tremor Activity</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Loc1SAOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="loc1_eh" class="tab-pane container">
+            
+              <!-- Overview Title -->
+              <div class="text-center" style="margin-top:2rem">
+                <h2 style="text-decoration:underline">LOCATION 1 ENVIRONMENTAL HAZARD OVERVIEW</h2>
+              </div>
+
+              <!-- Content Row -->
+              <div class="row">
+
+                <!-- Overall Condition -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Overall Condition</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="text-center">
+                        <h6 style="text-decoration:underline">Status</h6>
+                        <div class="btn btn-circle btn-lg btn-success">
+                          <i class="fas fa-check"></i>
+                        </div>
+                        <div class="text-success" style="font-weight:bold">Safe to be Operated</div>
+                        <br>
+                        <div class="d-sm-inline-block col-xl-12">
+                          Methane:
+                          <div class="text-success" style="font-weight:bold">Normal</div>
+                        </div>
+                        <br>
+                        <div>Next Possible Evacuation:</div>
+                        <div class="text-success" style="font-weight:bold">Unknown</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Machine Details -->
+                <div class="col-xl-6">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Machine Details</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <tr>
+                          <th>Attribute</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>ID</td>
+                          <td>SITE001</td>
+                        </tr>
+                        <tr>
+                          <td>Location</td>
+                          <td>Jakarta</td>
+                        </tr>
+                        <tr>
+                          <td>Year</td>
+                          <td>2018</td>
+                        </tr>
+                        <tr>
+                          <td>Type</td>
+                          <td>Coal Mining</td>
+                        </tr>
+                        <tr>
+                          <td>Last Accident</td>
+                          <td>21 June 2019</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Methane -->
+                <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Methane Concentration</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" style="padding:0">
+                      <div class="chart-area">
+                        <canvas id="Loc1EHOverviewChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-area-demo-predictiveAnalysis.js"></script>
+
+  <!-- Custom JS -->
+  <script type="text/javascript">
+    $('#asset1_mf_link').click(function(e) {
+      e.preventDefault();
+      $('#asset1_mf_tab').click();
+    })
+    $('#asset2_mf_link').click(function(e) {
+      e.preventDefault();
+      $('#asset2_mf_tab').click();
+    })
+    $('#asset3_mf_link').click(function(e) {
+      e.preventDefault();
+      $('#asset3_mf_tab').click();
+    })
+    $('#loc1_sa_link').click(function(e) {
+      e.preventDefault();
+      $('#loc1_sa_tab').click();
+    })
+    $('#loc1_eh_link').click(function(e) {
+      e.preventDefault();
+      $('#loc1_eh_tab').click();
+    })
+  </script>
+
+</body>
+
+</html>
