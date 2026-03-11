@@ -1,0 +1,19 @@
+{
+  "name": "Rakadetyo Alif",
+  "title": "Data Scientist &middot; Junior Software Engineer",
+  "phone": {
+    "label": "(+62) 811-163-8933",
+    "url": "https://wa.me/628111638933"
+  },
+  "email": {
+    "label": "rakadetyoalif@gmail.com",
+    "url": "mailto:rakadetyoalif@gmail.com"
+  },
+  "bio": "Adaptable and proficient Data Scientist with hands-on experience in the tech industry. Demonstrated ability to excel in diverse roles, including those of a Data Scientist, Data Analyst, and Backend Development. Proficient in applying advanced data analysis techniques to uncover valuable insights guiding strategic planning. Skilled in backend development using Django & NodeJS, enabling the creation of robust and efficient applications. Adept at overseeing projects from inception to completion, ensuring timely delivery aligned with business objectives.",
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rakadetyo/" },
+    { "label": "GitHub", "url": "https://github.com/Rakadetyo" },
+    { "label": "Linktree", "url": "https://linktr.ee/rakadetyo" },
+    { "label": "Download CV", "url": "https://drive.google.com/file/d/1l20hGGVEM8mKFDaK22w5yaZb8yJxOmm7/view?usp=sharing" }
+  ]
+}

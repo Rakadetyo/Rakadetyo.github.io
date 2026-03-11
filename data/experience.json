@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Lead Data & Lead Backend Developer",
+    "org": "Spinnel",
+    "date": "July 2021 &ndash; Present",
+    "points": [
+      "Establishing Spinnel, a social commerce analytics platform, Spinnel. Spinnel received acknowledgement from various VC and in process for a pre-seed level funding.",
+      "Overseeing a group of 3 backend developers and act as project manager. Implement and sustain Agile workflow in the process.",
+      "Developed and launched RESTFULL backend API using Django Rest Framework. Designing data storage architecture & ETL pipeline. Determine key metrics / insights analysis. Implement Automated crawling system, and message-queue method for Spinnel microservices."
+    ]
+  },
+  {
+    "title": "Data Analyst",
+    "org": "PT Astra Graphia Information Technology",
+    "date": "June 2020 &ndash; June 2021",
+    "points": [
+      "Working as Data Analyst on a project with Telkomsel's Customer Journey Experience (CJX) Team to analyze Telkomsel's social media and customer's journey sentiments.",
+      "Recognized as the Best Analyst of 2020.",
+      "Analyzing customer interaction data. Analysis results in improvement in MyTelkomsel App and Social Media Handler Services.",
+      "Developed machine learning model to analyze sentiment from Telkomsel's social media and data analysis pipeline for Telkomsel's CJX team"
+    ]
+  },
+  {
+    "title": "Data Scientist",
+    "org": "PT ReNom Infrastruktur Indonesia (RII)",
+    "date": "Jan 2019 &ndash; Apr 2020",
+    "points": [
+      "Become member of a innovative team that penetrates AI market in Indonesia.",
+      "Develops multiple POCs and Machine Learning solutions for startups, corporates, and goverment instances for Indonesia and Japanese clients.",
+      "Concentrates on CNN models to address computer vision problems."
+    ]
+  },
+  {
+    "title": "Data Scientist Intern",
+    "org": "PT ReNom Infrastruktur Indonesia (RII)",
+    "date": "Sep 2018 &ndash; Jan 2019",
+    "points": [
+      "Selected as an intern (1 out of 50+ registrants) from UMN x ReNom program. Learning the basics of Deep Learning, Modeling, and an end-to-end Machine Learning Project along the way. Working on a facial skin care project, detecting skin problem using Image Segmentation Algorithm."
+    ]
+  },
+  {
+    "title": "Web Developer Intern",
+    "org": "PT Sahabat Utama Traco",
+    "date": "June 2017 &ndash; Sep 2017",
+    "points": [
+      "Fullstack developer intern working on a website that supports live broadcasting services and hosting a competition event."
+    ]
+  }
+]

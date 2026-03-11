@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "name": "Programming Languages",
+      "type": "tags",
+      "items": ["Python", "HTML5", "CSS3", "JavaScript", "Angular", "PHP", "Java", "C", "C++", "C#"]
+    },
+    {
+      "name": "Tools",
+      "type": "check",
+      "items": [
+        "Jupyter Notebook",
+        "Tensorflow & Keras",
+        "Code Igniter",
+        "Windows, Linux, Kali Linux, and other linux distros",
+        "Pandas, Matplotlib",
+        "Google Cloud Platform (GCP)"
+      ]
+    },
+    {
+      "name": "Communication",
+      "type": "check",
+      "items": [
+        "Spoken Language: Indonesia, English (445 / 490 TOEIC Score)",
+        "Experienced in various organization. Excels in public speaking, decision making, leadership, teamwork, and critical & long-term thinking"
+      ]
+    },
+    {
+      "name": "Other",
+      "type": "check",
+      "items": [
+        "Network & Cyber Security Basics",
+        "Artificial Intelligence Concepts",
+        "Computer Vision Concepts"
+      ]
+    }
+  ]
+}

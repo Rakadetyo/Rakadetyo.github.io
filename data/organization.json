@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Universitas Multimedia Nusantara",
+    "entries": [
+      { "role": "Head of New Student Orientation (OMB)", "date": "2017" },
+      { "role": "Organizing committee coordinator of OMB", "date": "2016" },
+      { "role": "Organizing committee coordinator of Maxima", "date": "2016" },
+      { "role": "Organizing committee member OMB", "date": "2015" },
+      { "role": "Organizing committee member Ufest", "date": "2015" },
+      { "role": "Mentor in the Kompas Gramedia Mentoring Program", "date": "2015" }
+    ]
+  },
+  {
+    "name": "Unit Kegiatan Sosial Rencang",
+    "entries": [
+      { "role": "External Public Relations at Rencang", "date": "2016 &ndash; 2017" },
+      { "role": "Blood Donor Organizing committee member", "date": "2015 &ndash; 2017" },
+      { "role": "Organizing committee member Windows of Hope (Teaching) & Rencang Night", "date": "2015 &ndash; 2017" },
+      { "role": "Organizing committee member Bermimpi (Youth correctional facility visit)", "date": "2016" },
+      { "role": "Organizing committee member \"We are The Same\" (Social Campaign)", "date": "2016" }
+    ]
+  },
+  {
+    "name": "Himpunan Mahasiswa Teknik Informatika (HIMTI)",
+    "entries": [
+      { "role": "Humanities Division at HIMTI Gen 6", "date": "2015 &ndash; 2016" },
+      { "role": "Head of Sportive (Academic & Sport Competition event)", "date": "2016" },
+      { "role": "Organizing committee coordinator Outbound", "date": "2016" },
+      { "role": "Open Forum Master of Ceremonies (MC)", "date": "2016" },
+      { "role": "Tutor for Algorithm Programming Course", "date": "2016" }
+    ]
+  }
+]

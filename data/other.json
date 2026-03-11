@@ -1,0 +1,13 @@
+{
+  "paragraphs": [
+    "Outside of being data scientist, I loved playing Basketball as I idolized some NBA players. I also loved running, cycling, and swimming as sports. I put interest in Teas, as well as Foreign Culture and Languages. I always followed latest technology updates especially on Artificiall Intelligence field, and gadgets.",
+    "When being indoors, I do read a lot of books, listen to various music, cooking, and play some games."
+  ],
+  "bio": [
+    { "label": "Name", "value": "Rakadetyo Alif" },
+    { "label": "Birthplace / Date", "value": "Yogykarta / 10 December 1996" },
+    { "label": "Gender", "value": "Male" },
+    { "label": "Citizenship", "value": "Indonesia" },
+    { "label": "Current Address", "value": "Jakarta" }
+  ]
+}

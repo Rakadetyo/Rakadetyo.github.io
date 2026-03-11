@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{meta_description}}">
+  <meta name="author" content="{{name}}">
+  <title>{{name}}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=UnifrakturMaguntia&family=MedievalSharp&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/medieval.css" rel="stylesheet">
+
+  <!-- Restore saved theme before paint -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <button class="nav__toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav__links').classList.toggle('is-open')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links">
+{{nav_links}}
+      </ul>
+      <div class="theme-picker">
+        <button class="theme-picker__btn" aria-label="Change theme" aria-expanded="false" onclick="this.parentElement.classList.toggle('is-open'); this.setAttribute('aria-expanded', this.parentElement.classList.contains('is-open'))">
+          <span class="theme-picker__current"></span>
+        </button>
+        <ul class="theme-picker__menu">
+{{theme_options}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+{{sections}}
+
+    <!-- Footer -->
+    <footer class="footer">
+      {{name}}
+    </footer>
+
+  </div>
+
+  <script>
+    /* Theme names — add entries here when creating new themes */
+    var themes = {{themes_json}};
+
+    function setTheme(key) {
+      var root = document.documentElement;
+      if (key) {
+        root.setAttribute('data-theme', key);
+        localStorage.setItem('theme', key);
+      } else {
+        root.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      }
+      updatePicker();
+      closePicker();
+    }
+
+    function updatePicker() {
+      var current = document.documentElement.getAttribute('data-theme') || '';
+      var label = document.querySelector('.theme-picker__current');
+      if (label) label.textContent = themes[current] || 'Modern';
+
+      /* Mark active item */
+      document.querySelectorAll('.theme-picker__menu button').forEach(function(btn) {
+        btn.classList.toggle('is-active', btn.getAttribute('data-theme-value') === current);
+      });
+    }
+
+    function closePicker() {
+      var picker = document.querySelector('.theme-picker');
+      if (picker) {
+        picker.classList.remove('is-open');
+        picker.querySelector('.theme-picker__btn').setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    /* Close dropdown when clicking outside */
+    document.addEventListener('click', function(e) {
+      var picker = document.querySelector('.theme-picker');
+      if (picker && !picker.contains(e.target)) closePicker();
+    });
+
+    document.addEventListener('DOMContentLoaded', updatePicker);
+  </script>
+</body>
+
+</html>

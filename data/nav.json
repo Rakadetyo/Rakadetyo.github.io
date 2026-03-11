@@ -1,0 +1,16 @@
+{
+  "sections": [
+    { "id": "about", "label": "About" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "awards", "label": "Awards" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "education", "label": "Education" },
+    { "id": "organization", "label": "Organization" },
+    { "id": "other", "label": "Other" }
+  ],
+  "themes": {
+    "": "Modern",
+    "medieval": "Medieval"
+  }
+}

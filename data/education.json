@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Universitas Multimedia Nusantara",
+    "subtitle": "Bachelor of Computer Science",
+    "date": "Aug 2014 &ndash; July 2018",
+    "details": [
+      "Computer Science &mdash; Cyber Security Track",
+      "GPA: 3.34"
+    ],
+    "transcripts": [
+      { "label": "Official Transcript", "text": "Academic Record Transcript", "url": "https://drive.google.com/file/d/1d4NY9VapZQQpFtPKPpKHmYImu1_1stoD/view?usp=sharing" },
+      { "label": "Unofficial Transcript", "text": "Academic Record Transcript", "url": "https://drive.google.com/file/d/1oNFTKsgqTB66oL6W7BfOhf_ZZIHDQGd9/view?usp=sharing" }
+    ]
+  },
+  {
+    "title": "SMA Negeri 66 Jakarta Selatan",
+    "subtitle": "Natural Science",
+    "date": "2011 &ndash; 2014"
+  },
+  {
+    "title": "SMP Negeri 68 Jakarta Selatan",
+    "date": "2008 &ndash; 2011"
+  },
+  {
+    "title": "SDI Al-Ikhlas Jakarta Selatan",
+    "date": "2002 &ndash; 2008"
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "title": "Spinnel",
+    "subtitle": "Social-commerce analytics platform",
+    "description": [
+      "Develop RESTFUL API endpoints using Django Rest Framework, includes data analysis in python, implement message queue using AWS SQS and celery, and automate data scraping using AWS Eventbridge & AWS Lambda.",
+      "Define and implement cloud architecture using AWS.",
+      "Manage a team of 3 other backend developers and maintain agile method in the process.",
+      "Contribute in developing Spinnel as product / business, involved in business strategy meetings and seed funding pitchings."
+    ]
+  },
+  {
+    "title": "Grownow",
+    "subtitle": "Influencer Marketplace for Sevenads.id",
+    "description": [
+      "Working on backend development using NodeJS.",
+      "Heavily focuses on refactoring and implementing backend best practices, also develop critical features such as integrated payment gateway."
+    ]
+  },
+  {
+    "title": "MyAddressWallet",
+    "subtitle": "A secure blockchain deposit & wallet",
+    "description": [
+      "Work on blockchain integration with backend development, handles blockchain transaction, payment, and switchings.",
+      "Develop backend using NodeJS, hosted on customized AWS instances to handle blockchain transactions."
+    ]
+  },
+  {
+    "title": "Social Media Sentiment Analysis",
+    "subtitle": "Telkomsel Social Media",
+    "description": [
+      "Develop a LSTM algorithm (improved from Random Forest) to analyze sentiment from Telkomsel Social Media. Work scope including data scrapping, preprocessing, training, evaluation, and improvement."
+    ]
+  },
+  {
+    "title": "Data Analysis on Customer Interaction",
+    "subtitle": "Telkomsel Customer Journey Experience",
+    "description": [
+      "Provide data analysis pipeline on various Telkomsel products including: Mytsel, Maxstream, Dunia Games, ByU, and customer complaints data. Working on customer complaints, questions, and other customer journey data."
+    ]
+  },
+  {
+    "title": "Video Content Filtering",
+    "subtitle": "Digital Advertising Media (Bound to NDA)",
+    "description": [
+      "Work as a lead DS in an Advertising Video Filtering project. Filtering conduct using image classification algorithm. Algorithm works with > 70% F-Score on Test Dataset with small Training Dataset (< 500 images each class)."
+    ]
+  },
+  {
+    "title": "Safety Equipment Detection",
+    "subtitle": "Goverment Energy Plantation (Bound to NDA)",
+    "description": [
+      "Work as an inference engineer in this project. Algorithm hosted in cloud and inference is done using Python Flask to hit algorithm as an API from a website. This project was meant to ensure safety to workers on site."
+    ]
+  },
+  {
+    "title": "Traffic Violation, Car Counting, and Navigation in Parking Area",
+    "subtitle": "Internal RII Project",
+    "description": [
+      "Work on an independent project at RII as company vision towards smart city Indonesia. Project conducted in the streets of Jakarta, Mall, and Campus."
+    ]
+  },
+  {
+    "title": "Prediction and Analysis on a Shrimp Farm",
+    "subtitle": "Agriculture Startup (Bound to NDA)",
+    "description": [
+      "Handle exploratory data analysis (EDA) and data preprocessing as well as develop a regression model on it. Out of 100% data, only 7% are usable thus makes this project really challenging."
+    ]
+  },
+  {
+    "title": "Rice Paddy Disease Detection",
+    "subtitle": "Agriculture Startup (Bound to NDA)",
+    "description": [
+      "Develop an Object Detection model to detect diseases in paddy plantation. The data provided by the client were captured by farmers with lack of consistency yet we were able to develop a model with those kind of data."
+    ]
+  },
+  {
+    "title": "Real Time Text Detection Using Sobel and K-Means",
+    "subtitle": "Final Project",
+    "description": [
+      "Research in computer vision preprocessing methods. Presented in 2019 5th International Conference on New Media Studies. Internationally published and Indexed in IEEE journal."
+    ],
+    "links": [
+      { "label": "Official Script", "url": "http://kc.umn.ac.id/5068/" },
+      { "label": "Paper", "url": "https://drive.google.com/file/d/1TYJV9KctA46dMTFHUE0RCLtXy05LYg5d/view?usp=sharing" }
+    ]
+  },
+  {
+    "title": "Tournament Website for PUBG",
+    "subtitle": "Aerowolf Organizer (Part of Sahabat Utama Traco Group)",
+    "description": [
+      "Website developed as an intern in Sahabat Utama Traco Group. Aerowolf Organizer was hosting the 3rd PUBG tournament in the world back in 2017 and this website was created to accomodate the tournament. Working on this project as a full stack developer in a team of 2."
+    ],
+    "links": [
+      { "label": "Old site", "url": "http://pubg.aerowolforg.com" },
+      { "label": "Current site", "url": "http://mllb.aerowolforg.com" }
+    ]
+  },
+  {
+    "title": "Local Shoe Cleaning Website",
+    "subtitle": "Pickmykicks",
+    "description": [
+      "Website developed as a freelance developer for a local shoe cleaning startup"
+    ],
+    "links": [
+      { "label": "Pick My Kicks Site", "url": "http://pickmykicksid.com" }
+    ]
+  }
+]
