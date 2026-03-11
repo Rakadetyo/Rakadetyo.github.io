@@ -1,0 +1,516 @@
+/* ==========================================================================
+   Star Wars Theme - Dark Side / Mace Windu Edition
+   Dark background with starfield, lightsaber color palette.
+   Applied via [data-theme="starwars"] on <html>.
+   ========================================================================== */
+
+/* ---------- Star Wars Custom Properties ---------- */
+[data-theme="starwars"] {
+  /* Colors — deep space + Mace Windu's purple saber */
+  --color-bg: #0a0a0f;
+  --color-surface: #12121a;
+  --color-text: #e0dfe6;
+  --color-text-secondary: #a8a6b4;
+  --color-text-muted: #6e6c7a;
+  --color-accent: #b044f0;
+  --color-link: #c06cf5;
+  --color-link-hover: #d99cfa;
+  --color-rule: #2a2a3a;
+  --color-rule-light: #1e1e2c;
+
+  /* Lightsaber palette */
+  --saber-purple: #b044f0;
+  --saber-red: #e03040;
+  --saber-blue: #3898ff;
+  --saber-green: #44cc55;
+  --saber-yellow: #f0c830;
+
+  /* Glow variants */
+  --glow-purple: rgba(176, 68, 240, 0.35);
+  --glow-purple-soft: rgba(176, 68, 240, 0.12);
+  --glow-red: rgba(224, 48, 64, 0.35);
+  --glow-red-soft: rgba(224, 48, 64, 0.10);
+  --glow-blue: rgba(56, 152, 255, 0.35);
+  --glow-blue-soft: rgba(56, 152, 255, 0.10);
+  --glow-green: rgba(68, 204, 85, 0.35);
+  --glow-green-soft: rgba(68, 204, 85, 0.10);
+  --glow-yellow: rgba(240, 200, 48, 0.30);
+  --glow-yellow-soft: rgba(240, 200, 48, 0.10);
+
+  /* Typography — clean sci-fi feel */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ---------- Starfield background ---------- */
+@keyframes starfield-drift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-600px); }
+}
+
+[data-theme="starwars"] body {
+  background-color: var(--color-bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+[data-theme="starwars"] body::before,
+[data-theme="starwars"] body::after {
+  content: '';
+  position: fixed;
+  top: -600px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 600px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Star layer 1 — small dim stars */
+[data-theme="starwars"] body::before {
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 40% 8%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 55% 52%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 70% 22%, rgba(255,255,255,0.45), transparent),
+    radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 15% 78%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 48% 90%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 92% 42%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 33% 60%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 5% 45%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 62% 73%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 78% 5%, rgba(255,255,255,0.45), transparent),
+    radial-gradient(1px 1px at 20% 95%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 88% 88%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 45% 28%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 3% 70%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 58% 12%, rgba(255,255,255,0.45), transparent),
+    radial-gradient(1px 1px at 95% 55%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 30% 42%, rgba(255,255,255,0.4), transparent);
+  background-size: 400px 400px;
+  animation: starfield-drift 90s linear infinite;
+}
+
+/* Star layer 2 — bright colored stars + nebula glow */
+[data-theme="starwars"] body::after {
+  background-image:
+    /* Bright white stars */
+    radial-gradient(1.5px 1.5px at 18% 25%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 52% 68%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 75% 15%, rgba(255,255,255,0.9), transparent),
+    radial-gradient(1.5px 1.5px at 38% 82%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 90% 48%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 8% 55%, rgba(255,255,255,0.75), transparent),
+    radial-gradient(2px 2px at 65% 35%, rgba(255,255,255,0.85), transparent),
+    /* Colored tinted stars */
+    radial-gradient(2px 2px at 22% 42%, rgba(56, 152, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 80% 72%, rgba(224, 48, 64, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 45% 18%, rgba(176, 68, 240, 0.5), transparent),
+    radial-gradient(2px 2px at 68% 88%, rgba(68, 204, 85, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 12% 92%, rgba(240, 200, 48, 0.45), transparent),
+    /* Nebula glows */
+    radial-gradient(ellipse at 15% 20%, rgba(176, 68, 240, 0.04) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 75%, rgba(224, 48, 64, 0.03) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(56, 152, 255, 0.025) 0%, transparent 50%);
+  background-size: 500px 500px, 500px 500px, 500px 500px, 500px 500px,
+                   500px 500px, 500px 500px, 500px 500px,
+                   500px 500px, 500px 500px, 500px 500px, 500px 500px, 500px 500px,
+                   100% 100%, 100% 100%, 100% 100%;
+  background-repeat: repeat, repeat, repeat, repeat,
+                     repeat, repeat, repeat,
+                     repeat, repeat, repeat, repeat, repeat,
+                     no-repeat, no-repeat, no-repeat;
+  animation: starfield-drift 120s linear infinite;
+}
+
+/* ---------- Navigation ---------- */
+[data-theme="starwars"] .nav {
+  background-color: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+[data-theme="starwars"] .nav__links a {
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+[data-theme="starwars"] .nav__links a:hover {
+  color: var(--saber-purple);
+  text-shadow: 0 0 8px var(--glow-purple);
+}
+
+/* ---------- Typography ---------- */
+[data-theme="starwars"] h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 2.5rem;
+  color: var(--color-text);
+  text-shadow: 0 0 12px var(--glow-purple-soft), 0 0 30px rgba(176, 68, 240, 0.06);
+}
+
+[data-theme="starwars"] h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.1rem;
+  color: var(--saber-purple);
+  text-shadow: 0 0 10px var(--glow-purple), 0 0 25px var(--glow-purple-soft);
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: var(--space-sm);
+}
+
+/* Color-code each section heading by lightsaber color + subtle glow */
+[data-theme="starwars"] #experience h2   { color: var(--saber-blue);   text-shadow: 0 0 10px var(--glow-blue),   0 0 25px var(--glow-blue-soft); }
+[data-theme="starwars"] #projects h2     { color: var(--saber-green);  text-shadow: 0 0 10px var(--glow-green),  0 0 25px var(--glow-green-soft); }
+[data-theme="starwars"] #awards h2       { color: var(--saber-yellow); text-shadow: 0 0 10px var(--glow-yellow), 0 0 25px var(--glow-yellow-soft); }
+[data-theme="starwars"] #skills h2       { color: var(--saber-purple); text-shadow: 0 0 10px var(--glow-purple), 0 0 25px var(--glow-purple-soft); }
+[data-theme="starwars"] #education h2    { color: var(--saber-blue);   text-shadow: 0 0 10px var(--glow-blue),   0 0 25px var(--glow-blue-soft); }
+[data-theme="starwars"] #organization h2 { color: var(--saber-green);  text-shadow: 0 0 10px var(--glow-green),  0 0 25px var(--glow-green-soft); }
+[data-theme="starwars"] #other h2        { color: var(--saber-red);    text-shadow: 0 0 10px var(--glow-red),    0 0 25px var(--glow-red-soft); }
+
+[data-theme="starwars"] h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+[data-theme="starwars"] h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[data-theme="starwars"] body {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* ---------- Links ---------- */
+[data-theme="starwars"] a {
+  color: var(--color-link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(192, 108, 245, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+[data-theme="starwars"] a:hover {
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
+  text-shadow: 0 0 6px var(--glow-purple);
+}
+
+/* ---------- Section dividers — multi-color lightsaber slashes ---------- */
+[data-theme="starwars"] section + section {
+  border-top: none;
+  position: relative;
+}
+
+[data-theme="starwars"] section + section::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--saber-red) 10%,
+    var(--saber-purple) 35%,
+    var(--saber-blue) 55%,
+    var(--saber-green) 75%,
+    var(--saber-yellow) 90%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 8px var(--glow-purple),
+    0 0 20px var(--glow-purple),
+    0 0 40px var(--glow-purple-soft),
+    0 0 60px rgba(176, 68, 240, 0.08),
+    -60px 0 20px var(--glow-red),
+    -60px 0 40px var(--glow-red-soft),
+    60px 0 20px var(--glow-blue),
+    60px 0 40px var(--glow-blue-soft),
+    0 0 2px rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---------- About section ---------- */
+[data-theme="starwars"] .about__subtitle {
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+}
+
+[data-theme="starwars"] .about__subtitle a {
+  color: var(--color-text-muted);
+  border-bottom-color: rgba(110, 108, 122, 0.3);
+}
+
+[data-theme="starwars"] .about__bio {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="starwars"] .about__links a {
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  border-bottom: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+[data-theme="starwars"] .about__links a:hover {
+  color: var(--saber-purple);
+  text-shadow: 0 0 8px var(--glow-purple);
+}
+
+/* ---------- Entry items ---------- */
+[data-theme="starwars"] .entry__date {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* Blue markers for experience/education entries (Jedi blue) */
+[data-theme="starwars"] #experience .entry__content ul li::marker {
+  color: var(--saber-blue);
+}
+
+[data-theme="starwars"] #education .entry__content ul li::marker {
+  color: var(--saber-blue);
+}
+
+/* ---------- Project items — green accent (Jedi green) ---------- */
+[data-theme="starwars"] .project__links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--saber-green);
+  border-bottom-color: rgba(68, 204, 85, 0.3);
+}
+
+[data-theme="starwars"] .project__links a:hover {
+  color: #66dd77;
+  text-shadow: 0 0 6px var(--glow-green);
+  border-bottom-color: rgba(68, 204, 85, 0.6);
+}
+
+/* ---------- Skills tags — multi-color ---------- */
+[data-theme="starwars"] .skills-list--tags li {
+  border: 1px solid var(--color-rule);
+  border-radius: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  background-color: var(--glow-purple-soft);
+  color: var(--color-text-secondary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+[data-theme="starwars"] .skills-list--tags li:nth-child(5n+1) { border-left: 2px solid var(--saber-purple); }
+[data-theme="starwars"] .skills-list--tags li:nth-child(5n+2) { border-left: 2px solid var(--saber-blue); }
+[data-theme="starwars"] .skills-list--tags li:nth-child(5n+3) { border-left: 2px solid var(--saber-green); }
+[data-theme="starwars"] .skills-list--tags li:nth-child(5n+4) { border-left: 2px solid var(--saber-red); }
+[data-theme="starwars"] .skills-list--tags li:nth-child(5n+5) { border-left: 2px solid var(--saber-yellow); }
+
+[data-theme="starwars"] .skills-list--tags li:hover {
+  border-color: var(--saber-purple);
+  box-shadow: 0 0 8px var(--glow-purple-soft);
+  color: var(--color-text);
+}
+
+/* ---------- Skills group heading ---------- */
+[data-theme="starwars"] .skills-group h3 {
+  color: var(--color-text-muted);
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+/* ---------- Skills check — purple diamonds ---------- */
+[data-theme="starwars"] .skills-check li::before {
+  content: '\25C8';
+  color: var(--saber-purple);
+  font-size: 0.6rem;
+  top: 0.3rem;
+}
+
+/* ---------- Awards — yellow stars (Temple Guard / Sentinel) ---------- */
+[data-theme="starwars"] .awards-list li::before {
+  content: '\2726';
+  color: var(--saber-yellow);
+  font-size: 0.7rem;
+  top: 0.2rem;
+}
+
+[data-theme="starwars"] .awards-list li a {
+  color: var(--saber-yellow);
+  border-bottom-color: rgba(240, 200, 48, 0.3);
+}
+
+[data-theme="starwars"] .awards-list li a:hover {
+  text-shadow: 0 0 6px var(--glow-yellow);
+}
+
+/* ---------- Organization — green accent ---------- */
+[data-theme="starwars"] .org-group > h3 {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--saber-green);
+}
+
+[data-theme="starwars"] .org-entry__role {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="starwars"] .org-entry__date {
+  color: var(--color-text-muted);
+}
+
+/* ---------- Bio details — red accent (Sith) ---------- */
+[data-theme="starwars"] .bio-details li strong {
+  color: var(--saber-red);
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+[data-theme="starwars"] .footer {
+  border-top: 1px solid var(--color-rule);
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Theme picker ---------- */
+[data-theme="starwars"] .theme-picker__btn {
+  color: var(--color-text-muted);
+  border-color: var(--color-rule);
+}
+
+[data-theme="starwars"] .theme-picker__btn:hover {
+  color: var(--saber-purple);
+  border-color: var(--saber-purple);
+}
+
+[data-theme="starwars"] .theme-picker__menu {
+  background-color: var(--color-surface);
+  border-color: var(--color-rule);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--glow-purple-soft);
+}
+
+[data-theme="starwars"] .theme-picker__menu button {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="starwars"] .theme-picker__menu button:hover {
+  background-color: var(--glow-purple-soft);
+  color: var(--color-text);
+}
+
+[data-theme="starwars"] .theme-picker__menu button.is-active {
+  color: var(--saber-purple);
+}
+
+/* ---------- Nav toggle (mobile) ---------- */
+[data-theme="starwars"] .nav__toggle span {
+  background-color: var(--color-text-muted);
+}
+
+/* ---------- Scrollbar — purple saber ---------- */
+[data-theme="starwars"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-theme="starwars"] ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+[data-theme="starwars"] ::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 0;
+}
+
+[data-theme="starwars"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--saber-purple);
+  box-shadow: 0 0 6px var(--glow-purple);
+}
+
+/* ---------- Selection ---------- */
+[data-theme="starwars"] ::selection {
+  background-color: rgba(176, 68, 240, 0.3);
+  color: #ffffff;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  [data-theme="starwars"] .nav__links {
+    background-color: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  [data-theme="starwars"] h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  [data-theme="starwars"] h2 {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Print — Star Wars ---------- */
+@media print {
+  [data-theme="starwars"] {
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #000000;
+    --color-text-secondary: #222222;
+    --color-text-muted: #444444;
+    --color-accent: #000000;
+    --color-link: #000000;
+    --color-rule: #cccccc;
+    --color-rule-light: #cccccc;
+    --saber-purple: #000000;
+    --saber-red: #000000;
+    --saber-blue: #000000;
+    --saber-green: #000000;
+    --saber-yellow: #000000;
+    --glow-purple: transparent;
+    --glow-purple-soft: transparent;
+    --glow-red: transparent;
+    --glow-red-soft: transparent;
+    --glow-blue: transparent;
+    --glow-blue-soft: transparent;
+    --glow-green: transparent;
+    --glow-green-soft: transparent;
+    --glow-yellow: transparent;
+    --glow-yellow-soft: transparent;
+  }
+
+  [data-theme="starwars"] body::before,
+  [data-theme="starwars"] body::after {
+    display: none;
+  }
+
+  [data-theme="starwars"] body {
+    background-image: none;
+  }
+
+  [data-theme="starwars"] section + section::before {
+    background: #cccccc;
+    box-shadow: none;
+  }
+
+  [data-theme="starwars"] h1,
+  [data-theme="starwars"] h2 {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+}

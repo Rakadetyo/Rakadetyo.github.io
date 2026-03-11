@@ -23,21 +23,70 @@
   --font-body: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
 }
 
-/* ---------- Background texture ---------- */
+/* ---------- Background texture — aged parchment ---------- */
 [data-theme="medieval"] body {
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(139, 109, 63, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(139, 109, 63, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(100, 70, 30, 0.05) 0%, transparent 50%);
+    /* Fiber / grain noise — repeating specks */
+    radial-gradient(2px 2px at 8% 12%, rgba(100, 65, 20, 0.13), transparent),
+    radial-gradient(1.5px 2px at 22% 38%, rgba(80, 50, 10, 0.10), transparent),
+    radial-gradient(2.5px 1.5px at 45% 7%, rgba(110, 75, 30, 0.12), transparent),
+    radial-gradient(2px 2.5px at 68% 55%, rgba(90, 60, 15, 0.13), transparent),
+    radial-gradient(2px 1.5px at 85% 28%, rgba(75, 45, 10, 0.10), transparent),
+    radial-gradient(1.5px 2px at 35% 72%, rgba(105, 70, 25, 0.12), transparent),
+    radial-gradient(2.5px 2.5px at 52% 92%, rgba(85, 55, 12, 0.13), transparent),
+    radial-gradient(2px 1.5px at 78% 82%, rgba(95, 62, 18, 0.10), transparent),
+    radial-gradient(2px 2px at 12% 65%, rgba(80, 50, 10, 0.12), transparent),
+    radial-gradient(1.5px 2.5px at 92% 45%, rgba(100, 68, 22, 0.13), transparent),
+    /* Extra fiber density layer */
+    radial-gradient(3px 1px at 18% 48%, rgba(90, 58, 14, 0.09), transparent),
+    radial-gradient(1px 3px at 62% 32%, rgba(110, 72, 28, 0.08), transparent),
+    radial-gradient(2px 3px at 42% 88%, rgba(85, 52, 12, 0.10), transparent),
+    radial-gradient(3px 2px at 88% 15%, rgba(95, 60, 16, 0.09), transparent),
+    /* Aged stain patches — visible warm discolorations */
+    radial-gradient(ellipse at 12% 8%, rgba(140, 95, 30, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 78% 22%, rgba(120, 80, 20, 0.20) 0%, transparent 40%),
+    radial-gradient(ellipse at 35% 55%, rgba(130, 88, 25, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 88% 65%, rgba(145, 100, 35, 0.22) 0%, transparent 38%),
+    radial-gradient(ellipse at 20% 80%, rgba(125, 82, 22, 0.20) 0%, transparent 45%),
+    radial-gradient(ellipse at 65% 12%, rgba(135, 90, 28, 0.18) 0%, transparent 42%),
+    radial-gradient(ellipse at 50% 40%, rgba(115, 75, 18, 0.15) 0%, transparent 55%),
+    /* Darker foxing spots — small concentrated age marks */
+    radial-gradient(circle at 30% 20%, rgba(100, 60, 10, 0.30) 0%, transparent 8%),
+    radial-gradient(circle at 70% 45%, rgba(110, 68, 15, 0.25) 0%, transparent 6%),
+    radial-gradient(circle at 15% 60%, rgba(95, 55, 8, 0.28) 0%, transparent 7%),
+    radial-gradient(circle at 82% 85%, rgba(105, 65, 12, 0.25) 0%, transparent 9%),
+    radial-gradient(circle at 55% 75%, rgba(100, 58, 10, 0.22) 0%, transparent 7%),
+    /* Edge darkening — strong worn vignette */
+    radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(80, 50, 15, 0.18) 100%);
+  background-size:
+    /* Fiber layers — small repeating tiles */
+    60px 60px, 72px 55px, 85px 78px, 58px 68px, 78px 72px,
+    65px 58px, 70px 85px, 55px 70px, 82px 62px, 68px 82px,
+    /* Extra fiber — slightly larger tiles */
+    95px 50px, 50px 95px, 75px 90px, 90px 65px,
+    /* Stain patches — full viewport */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* Foxing spots — full viewport */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* Vignette */
+    100% 100%;
+  background-repeat:
+    repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat;
 }
 
 /* ---------- Navigation ---------- */
 [data-theme="medieval"] .nav {
-  background-color: rgba(245, 230, 200, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(239, 224, 196, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--color-rule);
+  box-shadow: 0 2px 8px rgba(100, 70, 30, 0.08);
 }
 
 [data-theme="medieval"] .nav__links a {

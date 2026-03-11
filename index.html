@@ -16,6 +16,7 @@
   <!-- Stylesheets -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/medieval.css" rel="stylesheet">
+  <link href="css/starwars.css" rel="stylesheet">
 
   <!-- Restore saved theme before paint -->
   <script>
@@ -53,6 +54,7 @@
         <ul class="theme-picker__menu">
           <li><button data-theme-value="" onclick="setTheme('')">Modern</button></li>
           <li><button data-theme-value="medieval" onclick="setTheme('medieval')">Medieval</button></li>
+          <li><button data-theme-value="starwars" onclick="setTheme('starwars')">Star Wars</button></li>
         </ul>
       </div>
     </div>
@@ -507,7 +509,7 @@
 
   <script>
     /* Theme names — add entries here when creating new themes */
-    var themes = {"": "Modern", "medieval": "Medieval"};
+    var themes = {"": "Modern", "medieval": "Medieval", "starwars": "Star Wars"};
 
     function setTheme(key) {
       var root = document.documentElement;

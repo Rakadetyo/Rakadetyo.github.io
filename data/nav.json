@@ -11,6 +11,7 @@
   ],
   "themes": {
     "": "Modern",
-    "medieval": "Medieval"
+    "medieval": "Medieval",
+    "starwars": "Star Wars"
   }
 }
