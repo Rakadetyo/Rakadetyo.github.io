@@ -1,0 +1,292 @@
+/* ==========================================================================
+   Medieval Theme - Parchment & Manuscript Style
+   Inspired by Anglo-Saxon documents, Harry Potter, Lord of the Rings.
+   Applied via [data-theme="medieval"] on <html>.
+   ========================================================================== */
+
+/* ---------- Medieval Custom Properties ---------- */
+[data-theme="medieval"] {
+  /* Colors — aged parchment palette */
+  --color-bg: #f5e6c8;
+  --color-surface: #efe0c4;
+  --color-text: #2b1d0e;
+  --color-text-secondary: #4a3728;
+  --color-text-muted: #7a6651;
+  --color-accent: #8b1a1a;
+  --color-link: #6b2014;
+  --color-link-hover: #8b1a1a;
+  --color-rule: #c4a46c;
+  --color-rule-light: #d4b98a;
+
+  /* Typography — blackletter + serif */
+  --font-heading: 'UnifrakturMaguntia', 'MedievalSharp', 'Georgia', serif;
+  --font-body: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+}
+
+/* ---------- Background texture ---------- */
+[data-theme="medieval"] body {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(139, 109, 63, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 109, 63, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(100, 70, 30, 0.05) 0%, transparent 50%);
+}
+
+/* ---------- Navigation ---------- */
+[data-theme="medieval"] .nav {
+  background-color: rgba(245, 230, 200, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--color-rule);
+}
+
+[data-theme="medieval"] .nav__links a {
+  font-family: var(--font-body);
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+[data-theme="medieval"] .nav__links a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Typography overrides ---------- */
+[data-theme="medieval"] h1 {
+  font-family: var(--font-heading);
+  text-transform: none;
+  font-weight: 400;
+  font-size: 3.25rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+[data-theme="medieval"] h2 {
+  font-family: var(--font-heading);
+  text-transform: none;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--color-rule);
+  padding-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+[data-theme="medieval"] h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-style: italic;
+}
+
+[data-theme="medieval"] h4 {
+  font-family: var(--font-body);
+  text-transform: none;
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+[data-theme="medieval"] body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+[data-theme="medieval"] p.lead,
+[data-theme="medieval"] .about__bio {
+  font-style: italic;
+}
+
+/* ---------- Links ---------- */
+[data-theme="medieval"] a {
+  color: var(--color-link);
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+[data-theme="medieval"] a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ---------- Section dividers — ornamental ---------- */
+[data-theme="medieval"] section + section {
+  border-top: none;
+  position: relative;
+}
+
+[data-theme="medieval"] section + section::before {
+  content: '\2766';  /* floral heart / fleuron */
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-rule);
+  padding-bottom: var(--space-md);
+  letter-spacing: 1rem;
+}
+
+/* ---------- About section ---------- */
+[data-theme="medieval"] .about__subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+[data-theme="medieval"] .about__links a {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* ---------- Social / About links ---------- */
+[data-theme="medieval"] .about__links a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Entry items ---------- */
+[data-theme="medieval"] .entry__date {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+[data-theme="medieval"] .entry__content ul {
+  list-style-type: disc;
+}
+
+[data-theme="medieval"] .entry__content ul li::marker {
+  color: var(--color-accent);
+}
+
+/* ---------- Skills tags ---------- */
+[data-theme="medieval"] .skills-list--tags li {
+  border: 1px solid var(--color-rule);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-style: italic;
+  background-color: rgba(196, 164, 108, 0.15);
+}
+
+/* ---------- Skills check ---------- */
+[data-theme="medieval"] .skills-check li::before {
+  content: '\2726';  /* four-pointed star */
+  color: var(--color-accent);
+  font-size: 0.65rem;
+  top: 0.25rem;
+}
+
+/* ---------- Awards ---------- */
+[data-theme="medieval"] .awards-list li::before {
+  content: '\2694';  /* crossed swords */
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  top: 0.05rem;
+}
+
+/* ---------- Organization ---------- */
+[data-theme="medieval"] .org-group > h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/* ---------- Bio details ---------- */
+[data-theme="medieval"] .bio-details li strong {
+  color: var(--color-accent);
+}
+
+/* ---------- Footer ---------- */
+[data-theme="medieval"] .footer {
+  border-top: 2px solid var(--color-rule);
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+/* ---------- Drop cap — first paragraph of About ---------- */
+[data-theme="medieval"] .about__bio::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  color: var(--color-accent);
+}
+
+/* ---------- Theme picker ---------- */
+[data-theme="medieval"] .theme-picker__btn {
+  color: var(--color-text-muted);
+  border-color: var(--color-rule);
+}
+
+[data-theme="medieval"] .theme-picker__btn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+[data-theme="medieval"] .theme-picker__menu {
+  background-color: var(--color-bg);
+  border-color: var(--color-rule);
+}
+
+[data-theme="medieval"] .theme-picker__menu button:hover {
+  background-color: rgba(196, 164, 108, 0.2);
+  color: var(--color-text);
+}
+
+[data-theme="medieval"] .theme-picker__menu button.is-active {
+  color: var(--color-accent);
+}
+
+/* ---------- Scrollbar ---------- */
+[data-theme="medieval"] ::-webkit-scrollbar {
+  width: 10px;
+}
+
+[data-theme="medieval"] ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+[data-theme="medieval"] ::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 0;
+}
+
+/* ---------- Mobile nav ---------- */
+@media (max-width: 768px) {
+  [data-theme="medieval"] .nav__links {
+    background-color: rgba(245, 230, 200, 0.98);
+  }
+
+  [data-theme="medieval"] h1 {
+    font-size: 2.25rem;
+  }
+
+  [data-theme="medieval"] h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------- Print — medieval ---------- */
+@media print {
+  [data-theme="medieval"] {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-text-secondary: #222222;
+    --color-text-muted: #444444;
+    --color-accent: #000000;
+    --color-rule: #999999;
+    --color-rule-light: #999999;
+  }
+
+  [data-theme="medieval"] body {
+    background-image: none;
+  }
+
+  [data-theme="medieval"] section + section::before {
+    color: #999999;
+  }
+
+  [data-theme="medieval"] .about__bio::first-letter {
+    color: #000000;
+  }
+}
