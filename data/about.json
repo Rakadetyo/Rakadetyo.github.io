@@ -1,9 +1,9 @@
 {
   "name": "Rakadetyo Alif",
-  "title": "Data Scientist &middot; Junior Software Engineer",
+  "title": "Data Scientist &middot; Software Engineer Manager",
   "phone": {
-    "label": "(+62) 811-163-8933",
-    "url": "https://wa.me/628111638933"
+    "label": "(+62) 851-2135-5363",
+    "url": "https://wa.me/6285121355363"
   },
   "email": {
     "label": "rakadetyoalif@gmail.com",
@@ -14,6 +14,9 @@
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rakadetyo/" },
     { "label": "GitHub", "url": "https://github.com/Rakadetyo" },
     { "label": "Linktree", "url": "https://linktr.ee/rakadetyo" },
-    { "label": "Download CV", "url": "https://drive.google.com/file/d/1l20hGGVEM8mKFDaK22w5yaZb8yJxOmm7/view?usp=sharing" }
+    {
+      "label": "Download CV",
+      "url": "https://drive.google.com/file/d/1l20hGGVEM8mKFDaK22w5yaZb8yJxOmm7/view?usp=sharing"
+    }
   ]
 }

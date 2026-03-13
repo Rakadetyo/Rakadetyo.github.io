@@ -255,6 +255,16 @@
   border-bottom-color: rgba(110, 108, 122, 0.3);
 }
 
+[data-theme="starwars"] .about__contact {
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+[data-theme="starwars"] .about__contact a {
+  color: var(--color-text-muted);
+  border-bottom-color: rgba(110, 108, 122, 0.3);
+}
+
 [data-theme="starwars"] .about__bio {
   color: var(--color-text-secondary);
 }

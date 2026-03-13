@@ -178,6 +178,11 @@
   font-style: italic;
 }
 
+[data-theme="medieval"] .about__contact {
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
 [data-theme="medieval"] .about__links a {
   font-family: var(--font-body);
   text-transform: none;
